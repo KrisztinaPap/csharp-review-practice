@@ -32,46 +32,19 @@ namespace CSharpReview
 
             userInput = int.Parse(Console.ReadLine());
 
-            switch (userInput % 2)
+            int y = 1;
+            while( y <= userInput )
             {
-                case 0:
-                    output = "even";
-                    break;
-                case 1:
-                    output = "odd";
-                    break;
-                default:
-                    output = "error";
-                    break;
+                Console.WriteLine(y);
+                y++;
             }
 
-            Console.WriteLine($"The number entered is {userInput}, it is {output}.");
-
-            string name;
-
-            // Write keeps the cursor on same line
-            Console.Write("Please enter your name: ");
-
-            name = Console.ReadLine().Trim();
-
-            // Roughly equivalent to name == "", except it also treats null as empty, and any whitespace
-            if (string.IsNullOrWhiteSpace(name))
+            for( int x = 1; x <=userInput ; x++ )
             {
-                Console.WriteLine("Invalud input: Please enter a name.");
+                Console.WriteLine(x);
             }
-            else if (name.ToLower() == "admin")
-            {
-                Console.WriteLine("Administrative access granted.");
-            }
-            else
-            {
-                // Concatenation
-                Console.WriteLine("Hello " + name + "! What a nice day!");
-                // Parameterized output
-                Console.WriteLine("Hello {0}! What a nice day today!", name);
-                // String interpolation
-                Console.WriteLine($"Hello {name}! What a nice day today!");
-            }           
+
+          
         }
     }
 }
