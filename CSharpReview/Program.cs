@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CSharpReview
 {
@@ -39,12 +40,18 @@ namespace CSharpReview
                 y++;
             }
 
-            for( int x = 1; x <=userInput ; x++ )
+            for( int x = 1; x <= userInput ; x++ )
             {
                 Console.WriteLine(x);
             }
 
-          
+            int z = 1;
+            do
+            {
+                Console.WriteLine(z);
+                z++;
+            } 
+            while ( z <= userInput );
         }
     }
 }
