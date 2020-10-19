@@ -25,6 +25,28 @@ namespace CSharpReview
             decimal aDecimal; // Extremely precise
 
 
+            int userInput;
+            string output;
+
+            Console.Write("Please enter a number: ");
+
+            userInput = int.Parse(Console.ReadLine());
+
+            switch (userInput % 2)
+            {
+                case 0:
+                    output = "even";
+                    break;
+                case 1:
+                    output = "odd";
+                    break;
+                default:
+                    output = "error";
+                    break;
+            }
+
+            Console.WriteLine($"The number entered is {userInput}, it is {output}.");
+
             string name;
 
             // Write keeps the cursor on same line
