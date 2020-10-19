@@ -27,7 +27,10 @@ namespace CSharpReview
 
             string name;
 
-            name = Console.ReadLine();
+            // Write keeps the cursor on same line
+            Console.Write("Please enter your name: ");
+
+            name = Console.ReadLine().Trim();
 
             // Concatenation
             Console.WriteLine("Hello "+name+"! What a nice day!");
