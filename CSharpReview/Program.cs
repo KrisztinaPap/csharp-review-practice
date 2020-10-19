@@ -32,9 +32,14 @@ namespace CSharpReview
 
             name = Console.ReadLine().Trim();
 
-            if (name == "")
+            // Roughly equivalent to name == "", except it also treats null as empty, and any whitespace
+            if (string.IsNullOrWhiteSpace(name))
             {
                 Console.WriteLine("Invalud input: Please enter a name.");
+            }
+            else if (name == "Admin")
+            {
+                Console.WriteLine("Administrative access granted.");
             }
             else
             {
