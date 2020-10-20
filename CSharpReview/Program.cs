@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -9,75 +10,17 @@ namespace CSharpReview
         static void Main(string[] args)
         // Entry point of programs in C#.
         {
-            // Declaration of variables
+            List<int> intList = new List<int>();
 
-            char aChar;
-            string aString;
-
-            bool aBoolean;
-
-            byte aByte; // Super small integer values (~120 max)
-            int anInt;
-            short aShortInt;
-            long aLongInt;
-
-            float aFloat; // Less precise than double
-            double aDouble;
-            decimal aDecimal; // Extremely precise
-
-
-            int userInput;
-            string output;
-
-            Console.Write("Please enter a number: ");
-
-            userInput = int.Parse(Console.ReadLine());
-
-            int y = 1;
-            while (y <= userInput)
-            {
-                Console.WriteLine(y);
-                y++;
-            }
-
-            for (int x = 1; x <= userInput; x++)
-            {
-                Console.WriteLine(x);
-            }
-
-            int z = 1;
+            int userInput = 1;
             do
             {
-                Console.WriteLine(z);
-                z++;
-            }
-            while (z <= userInput);
-
-            int[] intArray3 = new int[5];
-            int[] intArrayFilled = new int[] { 3, 5, 7, 8 };
-
-            bool[] boolArray = new bool[5];
-
-            int age = GetInt("Please enter your age: "); 
-
-            int[] intArray = new int[GetInt("Please enter a number of integers to store: ")];
-
-            for (int i = 0; i < intArray.Length; i++)
-            {
-                intArray[i] = GetInt($"Please enter integer #{i + 1}: ");
-            }
-
-            foreach(int integer in intArray)
-            {
-                Console.WriteLine(integer);
-            }
-
-            intArray[3] = 10;
-
-            for (int i = 0; i < intArray.Length; i++)
-            {
-                Console.WriteLine(intArray[i]);
-            }
+                userInput = GetInt("Please enter a positive integer to add to the list, or a negative one to exit: ");
+                if (userInput > 0)
+                {
+                    intList.Add(userInput);
+                }
+            } while (userInput > 0);
         }
 
         static int GetInt(string prompt)
