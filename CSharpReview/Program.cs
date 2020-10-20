@@ -34,13 +34,13 @@ namespace CSharpReview
             userInput = int.Parse(Console.ReadLine());
 
             int y = 1;
-            while( y <= userInput )
+            while (y <= userInput)
             {
                 Console.WriteLine(y);
                 y++;
             }
 
-            for( int x = 1; x <= userInput ; x++ )
+            for (int x = 1; x <= userInput; x++)
             {
                 Console.WriteLine(x);
             }
@@ -50,10 +50,13 @@ namespace CSharpReview
             {
                 Console.WriteLine(z);
                 z++;
-            } 
-            while ( z <= userInput );
+            }
+            while (z <= userInput);
 
             int[] intArray = new int[5];
+            int[] intArrayFilled = new int[] { 3, 5, 7, 8 };
+
+            bool[] boolArray = new bool[5];
 
             intArray[3] = 10;
 
@@ -63,6 +66,13 @@ namespace CSharpReview
             }
         }
 
+        static int GetInt(string prompt)
+        {
+            int input;
+            Console.Write(prompt);
+            input = int.Parse(Console.ReadLine());
+            return input;
+        }
         
     }
 }
