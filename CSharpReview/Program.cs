@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
@@ -21,6 +22,11 @@ namespace CSharpReview
                     intList.Add(userInput);
                 }
             } while (userInput > 0);
+
+            foreach ( int i in intList)
+            {
+                Console.WriteLine(i);
+            }
         }
 
         static int GetInt(string prompt)
