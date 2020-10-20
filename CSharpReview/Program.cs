@@ -52,6 +52,17 @@ namespace CSharpReview
                 z++;
             } 
             while ( z <= userInput );
+
+            int[] intArray = new int[5];
+
+            intArray[3] = 10;
+
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                Console.WriteLine(intArray[i]);
+            }
         }
+
+        
     }
 }
