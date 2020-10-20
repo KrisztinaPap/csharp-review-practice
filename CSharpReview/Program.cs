@@ -53,10 +53,24 @@ namespace CSharpReview
             }
             while (z <= userInput);
 
-            int[] intArray = new int[5];
+            int[] intArray3 = new int[5];
             int[] intArrayFilled = new int[] { 3, 5, 7, 8 };
 
             bool[] boolArray = new bool[5];
+
+            int age = GetInt("Please enter your age: "); 
+
+            int[] intArray = new int[GetInt("Please enter a number of integers to store: ")];
+
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                intArray[i] = GetInt($"Please enter integer #{i + 1}: ");
+            }
+
+            foreach(int integer in intArray)
+            {
+                Console.WriteLine(integer);
+            }
 
             intArray[3] = 10;
 
