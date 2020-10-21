@@ -7,10 +7,18 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace CSharpReview
 {
+    class Person
+    {
+        public string Name { get; set; }
+
+        public int Age { get; set; }
+    }
     class Program
     {
         static void Main(string[] args)
         {
+            List<Person> personList = new List<Person>;
+
             List<string> nameList = new List<string>();
             List<int> ageList = new List<int>();
 
